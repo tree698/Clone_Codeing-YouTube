@@ -6,61 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/2338065aad.js" crossorigin="anonymous"></script>
     <title>Clone Codieng-YouTube</title>
   </head>
   <body>
     <section class="youtube">
       <header class="header">
-        <div class="logo"></div>
-        <div class="input__container">
-          <input type="text" class="input" />
-          <button class="button search"></button>
-          <button class="button voice-search"></button>
+        <div class="logo__container">
+          <i class="fa-solid fa-bars"></i>
+          <img src="/img/logo.png" alt="youtube logo" class="logo__youtube">
+          <span class="logo__title">YouTube</span>
+          <span class="logo__kr">KR</span>
         </div>
-        <div class="inform-button__container">
-          <button class="button video-recoding"></button>
-          <button class="button inform"></button>
-          <button class="button owner"></button>
+        <div class="input__container">
+          <input type="text" class="input__text" placeholder="검색"/>
+          <button class="button search">
+            <img src="/img/search.png" alt="search bar" class="input__search">
+          </button>
+          <button class="button microphone">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+        </div>
+        <div class="function__container">
+          <button class="button video-recoding">
+            <i class="fa-solid fa-video"></i>
+          </button>
+          <button class="button bell">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="button owner">
+            <img src="/img/logo-owner.png" alt="owner logo" class="function__owner">
+          </button>
         </div>
       </header>
       <section class="video">
-        <img src="" alt="" class="video__image">
+        <img src="/img/main_video__img.png" alt="main video" class="video__image">
         <div class="video__description">
-          <p class="video__hashTag"></p>
-          <p class="video__title"></p>
-          <div class="video__additionInfo">
-            <span class="viewCount"></span>
-            <span class="icon__thumbup"></span>
-            <span class="thumbup__number"></span>
-            <span class="icon__thumbdown"></span>
-            <span class="thumbdown__number"></span>
-            <span class="icon__share"></span>
-            <span class="share"></span>
-            <span class="icon__offline-save"></span>
-            <span class="offline-save"></span>
-            <span class="icon__save"></span>
-            <span class="save"></span>
-            <span class="icon__more"></span>
+          <p class="video__hashTag">#MikeRounds #Republicans #MeetThePress</p>
+          <p class="video__title">Republican Senator Refuses To Say If He Would Support Trump In A Potential 2024 Bid</p>
+          <div class="video__additionalInfo">
+            <span class="viewCount">조회수 46,466회·2022.8.15</span>
+            <span class="icon__thumbsup">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </span>
+            <span class="number__thumbsup">219</span>
+            <span class="icon__thumbsdown">
+              <i class="fa-solid fa-thumbs-down"></i>
+            </span>
+            <span class="number__thumbsdown">싫어요</span>
+            <span class="icon__share">
+              <i class="fa-solid fa-share"></i>
+            </span>
+            <span class="share">공유</span>
+            <span class="icon__offline-save">
+              <i class="fa-solid fa-download"></i>
+            </span>
+            <span class="offline-save">오프라인 저장</span>
+            <span class="icon__save">
+              <i class="fa-solid fa-file-circle-plus"></i>
+            </span>
+            <span class="save">저장</span>
+            <span class="icon__ellipsis">
+              <i class="fa-solid fa-ellipsis"></i>
+            </span>
           </div>
         </div>
       </section>
       <section class="channel">
-        <img src="" alt="" class="channel__logo">
+        <img src="/img/logo-owner.png" alt="nbc logo" class="channel__logo">
         <div class="channel__info">
           <div class="channel__title">
             <div class="title__left">
-              <p class="title"></p>
-              <p class="subscribers"></p>
+              <span class="title">NBC News</span>
+              <span class="icon__check">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <p class="subscribers">구독자 697만명</p>
             </div>
             <div class="title__right">
-              <button class="button subscribe"></button>
-              <span class="icon__notification"></span>
+              <button class="button subscribe">구독중</button>
+              <span class="icon__notification">
+                <i class="fa-solid fa-bell-slash"></i>
+              </span>
             </div>
           </div>
-          <p class="channel__description"></p>
+          <br>
+          <div class="channel__description">
+            <p class="description">
+              During an exclusive interview with Meet the Press, Sen. Mike Rounds (R-S.D.) dodges a question about supporting former President Trump in a potential 2024 presidential bid. Former President Trump said on the 2016 campaign trail that Hillary Clinton should be "disqualified" from the race due to her email scandal. 
+            </p>
+            <br>
+            <div class="link">
+              <i class="fa-solid fa-angles-right"></i>
+              <span class="link__title">Subscribe to NBC News:</span>
+              <a href="http://nbcnews.to/SubscribeToNBC" target="_blank class="link__web">http://nbcnews.to/SubscribeToNBC</a>
+              <br>
+              <i class="fa-solid fa-angles-right"></i>
+              <span class="link__title">Watch more NBC video:</span>
+              <a href="http://bit.ly/MoreNBCNews" target="_blank class="link__web">http://bit.ly/MoreNBCNews</a>
+            </div>
+            <br>
+            <p class="description">
+              NBC News Digital is a collection of innovative and powerful news brands that deliver compelling, diverse and engaging news stories. NBC News Digital features NBCNews.com, MSNBC.com, TODAY.com, Nightly News, Meet the Press, Dateline, and the existing apps and digital extensions of these respective properties.  We deliver the best in breaking news, live video coverage, original journalism and segments from your favorite NBC News Shows.
+            </p>
+            <br>
+            <span class="description">Connect with NBC News Online</span><br>
+            <span class="link__title">NBC News App:</span>
+            <a href="https://smart.link/5d0cd9df61b80" target="_blank class="link__web">https://smart.link/5d0cd9df61b80</a><br>
+            <span class="link__title">Breaking News Alerts:</span>
+            <a href="https://link.nbcnews.com/join/5cj/breaking-news-signup?cid=sm_npd_nn_yt_bn-clip_190621" target="_blank class="link__web">https://link.nbcnews.com/join/5cj/bre...</a><br>
+            <span class="link__title">Visit NBCNews.Com:</span>
+            <a href="http://nbcnews.to/ReadNBC" target="_blank class="link__web">http://nbcnews.to/ReadNBC</a><br>
+            <span class="link__title">Find NBC News on Facebook:</span>
+            <a href="http://nbcnews.to/LikeNBC" target="_blank class="link__web">http://nbcnews.to/LikeNBC</a><br>
+            <span class="link__title">Follow NBC News on Twitter:</span>
+            <a href="http://nbcnews.to/FollowNBC" target="_blank class="link__web">http://nbcnews.to/FollowNBC</a><br> 
+          </div>
+          <br>
+          <p class="channel__hashTag">#MikeRounds #Republicans #MeetThePress</p>
+          <br>
           <button class="button channel__more__info">더보기</button>
         </div>
       </section>
+
+      
       <ul class="related__video">
         <li class="video">
           <img src="" alt="" class="imag">
@@ -73,6 +142,7 @@
           </img>
         </li>
       </ul>
+
       <section class="comments">
         <div class="comments__info">
           <span class="comments__number"></span>
