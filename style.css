@@ -1,0 +1,70 @@
+:root {
+  --font-color-title: #212121;
+  --font-color-content: #242424;
+  --font-color-sub: #606060;
+  --font-color-search: #adadad;
+  --font-color-white: #ffffff;
+
+  --font-size-large: 1.8rem;
+  --font-size-medium: 1.6rem;
+  --font-size-regular: 1.4rem;
+  --font-size-small: 1.2rem;
+  --font-size-micro: 0.9rem;
+
+  --line: #d3d3d3;
+
+  --color-background: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+@media screen and (max-width: 1014px) {
+  .header {
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .logo__container {
+    display: flex;
+    align-items: center;
+    margin-left: 0.8rem;
+  }
+
+  .fa-bars {
+    font-size: var(--font-size-large);
+    margin-right: 1.8rem;
+  }
+
+  .logo__youtube {
+    width: 46px;
+    height: 46px;
+    margin-right: 0.4rem;
+  }
+
+  .logo__title {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-right: 0.2rem;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .logo__kr {
+    align-self: flex-start;
+    font-size: var(--font-size-micro);
+    color: var(--font-color-sub);
+    margin-top: 1.2rem;
+  }
+
+  .input__search,
+  .function__owner {
+    height: 1.1rem;
+  }
+}
