@@ -5,17 +5,18 @@
   --font-color-search: #adadad;
   --font-color-white: #ffffff;
 
-  --font-size-large: 1.8rem;
+  --font-size-large: 2rem;
   --font-size-medium: 1.6rem;
-  --font-size-regular: 1.4rem;
-  --font-size-small: 1.2rem;
-  --font-size-micro: 0.9rem;
+  --font-size-regular: 1.3rem;
+  --font-size-small: 1.1rem;
+  --font-size-micro: 0.8rem;
 
   --line: #cfcfcf;
   --border-radius: 2px;
 
   --color-background-light: #f8f8f8;
   --color-background-midLight: #ececec;
+  --color-blue: #1c64d6;
 }
 
 * {
@@ -32,15 +33,17 @@ button {
   outline: none;
   cursor: pointer;
   padding: 0;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1014px) {
+  /* header */
   .header {
     width: 100%;
     height: 5.5rem;
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 28px 0 16px;
   }
 
   .logo__container {
@@ -75,7 +78,7 @@ button {
   }
 
   .input__container {
-    height: 50px;
+    height: 55px;
     display: flex;
     margin-right: 4rem;
   }
@@ -132,5 +135,70 @@ button {
   }
   .function__owner {
     width: 40px;
+  }
+
+  /* main */
+  .contents {
+    padding: 0 24px;
+  }
+
+  /* section: video */
+  .video {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 34px; */
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 74%,
+      rgba(248, 248, 248, 1) 100%
+    );
+  }
+
+  .video__main {
+    width: 100%;
+  }
+
+  .video__description {
+    width: 100%;
+    padding: 40px 0 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .video__hashTag,
+  .video__title {
+    margin: 0;
+  }
+
+  .video__hashTag {
+    color: var(--color-blue);
+    font-size: var(--font-size-small);
+    text-decoration: none;
+  }
+
+  .video__title {
+    font-size: var(--font-size-medium);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2px;
+  }
+
+  .video__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-regular);
+    color: var(--font-color-sub);
+    margin-top: 18px;
+  }
+
+  .video__info__right {
+    width: 620px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .button.info__right {
+    font-size: var(--font-size-regular);
   }
 }
