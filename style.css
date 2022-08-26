@@ -9,7 +9,7 @@
   --font-size-medium: 1.6rem;
   --font-size-regular: 1.3rem;
   --font-size-small: 1.1rem;
-  --font-size-micro: 1rem;
+  --font-size-micro: 0.9rem;
 
   --line: #cfcfcf;
   --border-radius: 2px;
@@ -43,6 +43,12 @@ button {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 1014px) {
@@ -241,6 +247,7 @@ a {
 
   .fa-check {
     background-color: var(--color-background-midDarkGrey);
+    font-size: var(--font-size-micro);
     color: var(--color-white);
     border-radius: 50%;
     padding: 1px;
@@ -280,6 +287,7 @@ a {
     display: none;
   }
 
+  /* Banner for filtering videos: btn__filter__videos__related */
   .btn__filter__videos__related {
     margin: 2.8rem 0 1.8rem 0;
   }
@@ -300,5 +308,52 @@ a {
   .checked {
     background-color: var(--color-black);
     color: var(--color-white);
+  }
+
+  /* Show Related Videos: videos__related */
+  .video__related {
+    display: flex;
+    margin-bottom: 0.8rem;
+    text-align: left;
+  }
+
+  .video__related__image {
+    width: 230px;
+    height: 130px;
+    margin-right: 0.8rem;
+  }
+
+  .video__related__title {
+    font-size: var(--font-size-regular);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .video__related__channel,
+  .video__related__info,
+  .video__related__new {
+    font-size: var(--font-size-small);
+    color: var(--font-color-sub);
+  }
+
+  .video__related__info,
+  .video__related__new {
+    margin: 4px 0;
+  }
+
+  .video__related__new {
+    width: 80px;
+    background-color: var(--color-background-lightGrey);
+    padding: 5px 6px;
+  }
+
+  /* Show more videos button */
+  .show__more__videos {
+    width: 100%;
+    height: 50px;
+    border: 1.5px solid var(--color-blue);
+    color: var(--color-blue);
+    font-size: var(--font-size-small);
   }
 }
