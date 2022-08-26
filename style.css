@@ -279,4 +279,26 @@ a {
   .channel__description__hide {
     display: none;
   }
+
+  .btn__filter__videos__related {
+    margin: 2.8rem 0 1.8rem 0;
+  }
+
+  .filter__all,
+  .filter__relatedcontents,
+  .filter__nbcProvide,
+  .filter__recentUpload,
+  .filter__alreadySeen {
+    font-size: var(--font-size-regular);
+    border: 1px solid var(--line);
+    background-color: var(--color-background-lightGrey);
+    padding: 10px 16px;
+    border-radius: 25px;
+    margin-right: 0.4rem;
+  }
+
+  .checked {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
 }
