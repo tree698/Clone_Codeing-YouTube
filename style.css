@@ -163,7 +163,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 34px; */
     background: rgb(255, 255, 255);
     background: linear-gradient(
       0deg,
@@ -283,9 +282,9 @@ ul {
     color: var(--font-color-sub);
   }
 
-  .channel__description__hide {
+  /* .channel__description__hide {
     display: none;
-  }
+  } */
 
   /* Banner for filtering videos: btn__filter__videos__related */
   .btn__filter__videos__related {
@@ -356,4 +355,241 @@ ul {
     color: var(--color-blue);
     font-size: var(--font-size-small);
   }
+
+  /* section: comments */
+  .comments__info {
+    padding: 2rem 0;
+  }
+
+  .comments__number,
+  .button__arrange {
+    font-size: var(--font-size-regular);
+  }
+
+  .comments__number {
+    margin-right: 34px;
+  }
+
+  .arrange__method {
+    margin-left: 8px;
+  }
+
+  .comments__input {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .logo__commentor {
+    width: 60px;
+    margin-right: 0.8rem;
+  }
+
+  .comments__input__wrap {
+    width: 100%;
+  }
+
+  .text__input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: var(--font-size-small);
+    border-bottom: 1px solid var(--line);
+    outline: none;
+  }
+
+  .text__input__sub-banner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+  }
+
+  .fa-face-grin {
+    font-size: var(--font-size-small);
+  }
+
+  .comments__cancel,
+  .comments__submit {
+    font-size: var(--font-size-small);
+    color: var(--font-color-sub);
+  }
+
+  .comments__cancel {
+    margin-right: 30px;
+  }
+
+  .comments__submit {
+    background-color: var(--color-background-lightGrey);
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    cursor: auto
+  }
+
+  .comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .comment__contents {
+    width: 100%;
+  }
+
+.comment__contents,
+.response {
+  font-size: var(--font-size-small);
+  color: var(--font-color-content);
+}
+
+.id {
+  font-weight: bold;
+}
+
+.date,
+.response,
+.show__details {
+  color: var(--font-color-sub);
+}
+
+.comment-icon__thumbup,
+.comment-icon__thumbdown {
+  font-size: var(--font-size-regular);
+}
+
+.comment-thumbup__number,
+.comment-icon__thumbdown {
+  margin-right: 24px;
+}
+
+.content {
+  margin: 8px 0;
+}
+
+.show__details {
+  display: block;
+  font-size: var(--font-size-small);
+  margin-bottom: 8px;
+}
+
+.response__input {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 12px;
+}
+
+.response__logo-commentor {
+  width: 36px;
+  margin-right: 8px;
+}
+
+.response__input-wrap {
+  width: 100%;
+}
+
+.response__input-text {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--font-size-small);
+  margin-bottom: 12px;
+}
+
+.response__sub-banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-face-grin,
+.response__cancel,
+.response__submit {
+  font-size: var(--font-size-small);
+  color: var(--font-color-sub);
+}
+
+.response__cancel {
+  margin-right: 20px;
+}
+
+.response__submit {
+  padding: 10px 14px;
+  background-color: var(--color-background-lightGrey);
+  border-radius: var(--border-radius);
+  cursor: auto;
+}
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  margin-left: 72.8px;
+  
+}
+
+.btn__reply-wrap {
+  margin-bottom: 20px;
+}
+
+.btn__reply-wrap,
+.reply__number {
+  color: var(--color-blue);
+  font-size: var(--font-size-small);
+}
+
+.reply__number {
+  margin-left: 12px;
+}
+
+.reply__comments {
+  margin-bottom: 14px;
+}
+
+.reply__comment {
+  display: flex;
+  align-items: flex-start;
+  margin: 14px 0 18px 0;
+}
+
+.reply__logo-commentor {
+  width: 36px;
+  margin-right: 12px;
+}
+
+.reply__contents {
+  width: 100%;
+}
+
+.reply__contents,
+.reply__icon-thumbup,
+.reply__icon-thumbdown,
+.reply__response {
+  font-size: var(--font-size-small);
+  color: var(--font-color-content);
+}
+
+.reply__id {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.reply__content {
+  margin: 8px 0 16px 0;
+}
+
+.reply__icon-thumbup,
+.reply__thumbup-number {
+  margin-right: 12px;
+}
+
+.reply__icon-thumbdown {
+  margin-right: 24px;
+}
+
+/* .hide {
+  display: none;
+} */
+
+
+
+
 }

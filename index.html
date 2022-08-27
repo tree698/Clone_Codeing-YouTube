@@ -44,6 +44,7 @@
           </button>
         </div>
       </header>
+
       <main class="contents">
         <section class="video">
           <img src="/img/main_video__img.png" alt="main video" class="video__main">
@@ -54,11 +55,11 @@
               <span class="video__info__left">조회수 46,466회 · 2022. 8. 15.</span>
               <div class="video__info__right">
                 <button class="button info__right">
-                  <i class="fa-solid fa-thumbs-up"></i>
+                  <i class="fa-regular fa-thumbs-up"></i>
                   <span class="number__thumbsup">219</span>
                 </button>
                 <button class="button info__right">
-                  <i class="fa-solid fa-thumbs-down"></i>
+                  <i class="fa-regular fa-thumbs-down"></i>
                   <span class="number__thumbsdown">싫어요</span>
                 </button>
                 <button class="button info__right">
@@ -80,6 +81,7 @@
             </div>
           </div>
         </section>
+
         <section class="channel">
           <div class="channel__title">
             <div class="channel__title__left">
@@ -133,6 +135,7 @@
             <button class="button channel__more__info">더보기</button>
           </div>
         </section>
+        
         <div class="btn__filter__videos__related">
           <button class="button filter__all checked">모두</button>
           <button class="button filter__relatedcontents">관련 콘텐츠</button>
@@ -244,15 +247,22 @@
         <section class="comments">
           <div class="comments__info">
             <span class="comments__number">댓글 199개</span>
-            <span class="icon__arrage">
-              <i class="fa-solid fa-bars-sort"></i>
-            </span>
-            <span class="arrage__method">정렬 기준</span>
+            <button class="button__arrange">
+               <i class="fa-solid fa-arrow-down-wide-short"></i>
+               <span class="arrange__method">정렬 기준</span>
+            </button>
           </div>
           <div class="comments__input">
-            <img src="/img/logo-owner.png" alt="" class="logo__owner">
+            <img src="/img/logo-owner.png" alt="" class="logo__commentor">
             <div class="comments__input__wrap">
-              <input type="text" class="comments__input" placeholder="댓글 추가...">
+              <input type="text" class="text__input" placeholder="댓글 추가...">
+              <div class="text__input__sub-banner hide">
+                <i class="fa-regular fa-face-grin"></i>
+                <div class="text__input__cancel_submit">
+                  <button class="comments__cancel">취소</button>
+                  <button class="comments__submit">댓글</button>
+                </div>
+              </div>
             </div>
           </div>
           <ul class="comments__list">
@@ -262,67 +272,123 @@
                 <span class="id">fun_fact</span>
                 <span class="date">1일 전</span>
                 <p class="content">"A search warrant is a court order that a magistrate or judge issues to authorize law enforcement officers to conduct a search of a person, location, or vehicle for evidence of a crime and to confiscate any evidence they find."  The GOP supports law enforcement when it serves their political interests.</p>
-                <span class="icon__thumbup">
-                  <i class="fa-solid fa-thumbs-up"></i>
-                </span>
-                <span class="thumbup__number">34</span>
-                <span class="icon__thumbdown">
-                  <i class="fa-solid fa-thumbs-down"></i>
-                </span>
-                <span class="response">답글</span>
-                <button class="button reply">
-                  <i class="fa-solid fa-caret-down"></i>
-                  <span class="reply__number">답글 7개</span>
+                <button class="comment-icon__thumbup">
+                  <i class="fa-regular fa-thumbs-up"></i>
                 </button>
-                <ul class="comments__reply">
-                  <li class="comment__reply">
-                    <img src="/img/reply-comment-1.png" alt="" class="logo__commentor">
-                    <div class="comment__contents">
-                      <span class="id">MrMooAndMoonSquirrelToo</span>
-                      <span class="date">14시간 전</span>
-                      <p class="content">They’re hypocrites and gaslighters.</p>
-                      <span class="icon__thumbup">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                      </span>
-                      <span class="thumbup__number">1</span>
-                      <span class="icon__thumbdown">
-                        <i class="fa-solid fa-thumbs-down"></i>
-                      </span>
-                      <span class="response">답글</span>
+                <span class="comment-thumbup__number">34</span>
+                <button class="comment-icon__thumbdown">
+                  <i class="fa-regular fa-thumbs-down"></i>
+                </button>
+                <button class="response">답글</button>
+
+                <div class="response__input hide">
+                  <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                  <div class="response__input-wrap">
+                    <input type="text" class="response__input-text" placeholder="답글 추가...">
+                    <div class="response__sub-banner">
+                      <i class="fa-regular fa-face-grin"></i>
+                      <div class="response__input__cancel-submit">
+                        <button class="response__cancel">취소</button>
+                        <button class="response__submit">댓글</button>
+                      </div>
                     </div>
-                  </li>
-                  <li class="comment__reply">
-                    <img src="/img/reply-comment-2.png" alt="" class="logo__commentor">
-                    <div class="comment__contents">
-                      <span class="id">R W</span>
-                      <span class="date">14시간 전</span>
-                      <p class="content">The Presidential Jail Cell at Trump’s new country club, that being Terra Haute in Indiana, will be ready for Trump.</p>
-                      <span class="icon__thumbup">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                      </span>
-                      <span class="icon__thumbdown">
-                        <i class="fa-solid fa-thumbs-down"></i>
-                      </span>
-                      <span class="response">답글</span>
-                    </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </li>
+            <div class="reply">
+              <div class="btn__reply-wrap">
+                <i class="fa-solid fa-caret-down"></i>
+                <button class="reply__number">답글 7개</button>
+              </div>
+              <ul class="reply__comments hide">
+                <li class="reply__comment">
+                  <img src="/img/reply-comment-1.png" alt="" class="reply__logo-commentor">
+                  <div class="reply__contents">
+                    <span class="reply__id">MrMooAndMoonSquirrelToo</span>
+                    <span class="reply__date">14시간 전</span>
+                    <p class="reply__content">They’re hypocrites and gaslighters.</p>
+                    <button class="reply__icon-thumbup">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                    <span class="reply__thumbup-number">1</span>
+                    <button class="reply__icon-thumbdown">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                    <button class="reply__response">답글</button>
+                    <div class="reply__input hide">
+                      <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                      <div class="response__input-wrap">
+                        <input type="text" class="response__input-text" placeholder="@MrMooAndMoonSquirrelToo">
+                        <div class="response__sub-banner">
+                          <i class="fa-regular fa-face-grin"></i>
+                          <div class="response__input__cancel-submit">
+                            <button class="response__cancel">취소</button>
+                            <button class="response__submit">댓글</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reply__comment">
+                  <img src="/img/reply-comment-2.png" alt="" class="reply__logo-commentor">
+                  <div class="reply__contents">
+                    <span class="reply__id">R W</span>
+                    <span class="reply__date">14시간 전</span>
+                    <p class="reply__content">The Presidential Jail Cell at Trump’s new country club, that being Terra Haute in Indiana, will be ready for Trump.</p>
+                    <button class="reply__icon-thumbup">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                    <button class="reply__icon-thumbdown">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                    <button class="reply__response">답글</button>
+                    <div class="reply__input hide">
+                      <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                      <div class="response__input-wrap">
+                        <input type="text" class="response__input-text" placeholder="@R W">
+                        <div class="response__sub-banner">
+                          <i class="fa-regular fa-face-grin"></i>
+                          <div class="response__input__cancel-submit">
+                            <button class="response__cancel">취소</button>
+                            <button class="response__submit">댓글</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <li class="comment">
               <img src="/img/comment-2.png" alt="" class="logo__commentor">
               <div class="comment__contents">
                 <span class="id">Black-Medicine</span>
                 <span class="date">14시간 전</span>
                 <p class="content">I love how she couldn't even help but defend her democrat narrative</p>
-                <span class="icon__thumbup">
-                  <i class="fa-solid fa-thumbs-up"></i>
-                </span>
-                <span class="thumbup__number">2</span>
-                <span class="icon__thumbdown">
-                  <i class="fa-solid fa-thumbs-down"></i>
-                </span>
-                <span class="response">답글</span>
+                <button class="comment-icon__thumbup">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                </button>
+                <span class="comment-thumbup__number">21</span>
+                <button class="comment-icon__thumbdown">
+                  <i class="fa-regular fa-thumbs-down"></i>
+                </button>
+                <button class="response">답글</button>
+
+                <div class="response__input hide">
+                  <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                  <div class="response__input-wrap">
+                    <input type="text" class="response__input-text" placeholder="답글 추가...">
+                    <div class="response__sub-banner">
+                      <i class="fa-regular fa-face-grin"></i>
+                      <div class="response__input__cancel-submit">
+                        <button class="response__cancel">취소</button>
+                        <button class="response__submit">댓글</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="comment">
@@ -337,14 +403,27 @@
                   Even though he'd implied it<br>
                   Now he must be indicted!!</p>
                   <button class="show__details">자세히 보기</button>
-                <span class="icon__thumbup">
-                  <i class="fa-solid fa-thumbs-up"></i>
-                </span>
-                <span class="thumbup__number">20</span>
-                <span class="icon__thumbdown">
-                  <i class="fa-solid fa-thumbs-down"></i>
-                </span>
-                <span class="response">답글</span>
+                  <button class="comment-icon__thumbup">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                  </button>
+                  <span class="comment-thumbup__number">12</span>
+                  <button class="comment-icon__thumbdown">
+                    <i class="fa-regular fa-thumbs-down"></i>
+                  </button>
+                  <button class="response">답글</button>
+                  <div class="response__input hide">
+                    <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                    <div class="response__input-wrap">
+                      <input type="text" class="response__input-text" placeholder="답글 추가...">
+                      <div class="response__sub-banner">
+                        <i class="fa-regular fa-face-grin"></i>
+                        <div class="response__input__cancel-submit">
+                          <button class="response__cancel">취소</button>
+                          <button class="response__submit">댓글</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </li>
             <li class="comment">
@@ -353,14 +432,27 @@
                 <span class="id">John Smith</span>
                 <span class="date">1일 전</span>
                 <p class="content">“On every occasion [of Constitutional interpretation] let us carry ourselves back to the time when the Constitution was adopted, recollect the spirit manifested in the debates, and instead of trying [to force] what meaning may be squeezed out of the text, or invented against it, [instead let us] conform to the probable one in which it was passed.”</p>
-                <span class="icon__thumbup">
-                  <i class="fa-solid fa-thumbs-up"></i>
-                </span>
-                <span class="thumbup__number">2</span>
-                <span class="icon__thumbdown">
-                  <i class="fa-solid fa-thumbs-down"></i>
-                </span>
-                <span class="response">답글</span>
+                <button class="comment-icon__thumbup">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                </button>
+                <span class="comment-thumbup__number">13</span>
+                <button class="comment-icon__thumbdown">
+                  <i class="fa-regular fa-thumbs-down"></i>
+                </button>
+                <button class="response">답글</button>
+                <div class="response__input hide">
+                  <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                  <div class="response__input-wrap">
+                    <input type="text" class="response__input-text" placeholder="답글 추가...">
+                    <div class="response__sub-banner">
+                      <i class="fa-regular fa-face-grin"></i>
+                      <div class="response__input__cancel-submit">
+                        <button class="response__cancel">취소</button>
+                        <button class="response__submit">댓글</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="comment">
@@ -369,23 +461,31 @@
                 <span class="id">JustBe</span>
                 <span class="date">1일 전</span>
                 <p class="content">Yep, concerned about his own seat rather than state of country.</p>
-                <span class="icon__thumbup">
-                  <i class="fa-solid fa-thumbs-up"></i>
-                </span>
-                <span class="thumbup__number">9</span>
-                <span class="icon__thumbdown">
-                  <i class="fa-solid fa-thumbs-down"></i>
-                </span>
-                <span class="response">답글</span>
+                <button class="comment-icon__thumbup">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                </button>
+                <span class="comment-thumbup__number">9</span>
+                <button class="comment-icon__thumbdown">
+                  <i class="fa-regular fa-thumbs-down"></i>
+                </button>
+                <button class="response">답글</button>
+                <div class="response__input hide">
+                  <img src="/img/logo-owner.png" alt="" class="response__logo-commentor">
+                  <div class="response__input-wrap">
+                    <input type="text" class="response__input-text" placeholder="답글 추가...">
+                    <div class="response__sub-banner">
+                      <i class="fa-regular fa-face-grin"></i>
+                      <div class="response__input__cancel-submit">
+                        <button class="response__cancel">취소</button>
+                        <button class="response__submit">댓글</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
         </section>
       </main>
-
-
-
-      
-    
   </body>
 </html>
