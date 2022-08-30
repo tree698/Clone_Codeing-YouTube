@@ -58,6 +58,7 @@ ul {
   height: 5.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 28px 0 16px;
 }
 
@@ -153,9 +154,16 @@ ul {
   width: 40px;
 }
 
-/* main */
+/* main: contents */
 .contents {
   padding: 0 24px;
+}
+
+#ytplayer {
+  /* position: sticky;
+  top: 0; */
+  width: 100%;
+  height: 500px;
 }
 
 /* section: video */
@@ -171,13 +179,6 @@ ul {
     rgba(248, 248, 248, 1) 100%
   );
   border-bottom: 1px solid var(--line);
-}
-
-#ytplayer {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 500px;
 }
 
 .video__description {
@@ -293,7 +294,12 @@ ul {
   color: var(--font-color-sub);
 }
 
-/* Banner for filtering videos: btn__filter__videos__related */
+/* Section: relatedVideo */
+.relatedVideo {
+  display: flex;
+  flex-direction: column;
+}
+
 .btn__filter__videos__related {
   margin: 2.8rem 0 1.8rem 0;
 }
@@ -316,7 +322,6 @@ ul {
   color: var(--color-white);
 }
 
-/* Show Related Videos: videos__related */
 .video__related {
   display: flex;
   margin-bottom: 0.8rem;
@@ -354,7 +359,6 @@ ul {
   padding: 5px 6px;
 }
 
-/* Show more videos button */
 .show__more__videos {
   width: 100%;
   height: 50px;
@@ -593,4 +597,37 @@ ul {
 
 .reply__icon-thumbdown {
   margin-right: 24px;
+}
+
+@media screen and (min-width: 1014px) {
+  .show__more__videos {
+    display: none;
+  }
+
+  .contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'a a d' 'b b d' 'c c d' 'e e d';
+  }
+
+  #ytplayer {
+    grid-area: a;
+  }
+
+  .video {
+    grid-area: b;
+  }
+
+  .channel {
+    grid-area: c;
+  }
+
+  .relatedVideo {
+    grid-area: d;
+  }
+
+  .comments {
+    grid-area: e;
+  }
 }
