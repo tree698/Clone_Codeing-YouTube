@@ -5,8 +5,8 @@
   --font-color-search: #adadad;
   --font-color-white: #ffffff;
 
-  --font-size-large: 2rem;
-  --font-size-medium: 1.6rem;
+  --font-size-large: 2.2rem;
+  --font-size-medium: 1.8rem;
   --font-size-regular: 1.3rem;
   --font-size-small: 1.1rem;
   --font-size-micro: 0.9rem;
@@ -74,7 +74,7 @@ ul .reply__comments.hide {
 /* header */
 .header {
   width: 100%;
-  height: 5.5rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,14 +83,18 @@ ul .reply__comments.hide {
 
 .header .logo {
   display: flex;
-  align-items: center;
   margin-left: 0.8rem;
-  margin-right: 4rem;
+  margin-right: 8.4rem;
 }
 
 .header .fa-bars {
   font-size: var(--font-size-large);
   margin-right: 1.8rem;
+}
+
+.header .ytLogo {
+  display: flex;
+  align-items: center;
 }
 
 .header .logo__youtube {
@@ -113,9 +117,11 @@ ul .reply__comments.hide {
 }
 
 .header .input {
-  height: 55px;
+  width: 900px;
+  min-width: 60px;
+  height: 60%;
   display: flex;
-  margin-right: 4rem;
+  margin-right: 8.4rem;
 }
 
 .header .input__text {
@@ -129,6 +135,8 @@ ul .reply__comments.hide {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(206, 205, 204, 1);
   -moz-box-shadow: inset 0px 0px 2px 0px rgba(206, 205, 204, 1);
   box-shadow: inset 0px 0px 2px 0px rgba(206, 205, 204, 1);
+  background: url('img/keyboard.png') no-repeat 98% 50%;
+  background-size: 40px 30px;
 }
 
 .header .input__search,
@@ -149,11 +157,11 @@ ul .reply__comments.hide {
 
 .header .fa-magnifying-glass,
 .header .fa-microphone {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-medium);
 }
 
 .header .function {
-  width: 140px;
+  width: 220px;
   display: flex;
 }
 
@@ -161,16 +169,20 @@ ul .reply__comments.hide {
 .header .function__bell,
 .header .function__owner__wrap {
   background-color: transparent;
-  margin-right: 2rem;
 }
 
 .header .fa-video,
 .header .fa-bell {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-medium);
+  margin-right: 44px;
 }
 
 .header .function__owner {
-  width: 40px;
+  width: 50px;
+}
+
+.header .actionBtn {
+  display: none;
 }
 
 /* main: contents */
@@ -605,7 +617,8 @@ ul .reply__comments.hide {
   margin-right: 24px;
 }
 
-@media screen and (min-width: 1014px) {
+/* min-width: 이상 */
+@media screen and (min-width: 1500px) {
   .relatedVideos__more {
     display: none;
   }
@@ -635,5 +648,26 @@ ul .reply__comments.hide {
 
   .comments {
     grid-area: e;
+  }
+}
+
+/* max-width: 이하 */
+@media screen and (max-width: 980px) {
+  .header .input,
+  .header .function {
+    display: none;
+  }
+
+  .header .actionBtn {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .action__search,
+  .header .action__microphone,
+  .header .action__recording,
+  .header .action__bell {
+    width: 30px;
   }
 }
