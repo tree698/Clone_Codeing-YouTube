@@ -80,7 +80,6 @@ ul .reply__comments.hide {
   align-items: center;
   justify-content: space-between;
   padding: 0 38px 0 24px;
-  /* margin-bottom: 24px; */
 }
 
 .header .logo {
@@ -151,6 +150,10 @@ ul .reply__comments.hide {
   border: 2px solid var(--line);
   border-left: none;
   margin-right: 0.4em;
+}
+
+.header .input__search:hover {
+  background-color: var(--color-background-lightGrey);
 }
 
 .header .input__microphone {
@@ -249,13 +252,20 @@ ul .reply__comments.hide {
   justify-content: space-between;
   font-size: var(--font-size-regular);
   color: var(--font-color-sub);
-  margin-top: 18px;
+  margin-top: 24px;
+}
+
+.video__info__left {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .video__info__right {
-  width: 620px;
+  width: 640px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .video .info__right {
@@ -372,7 +382,6 @@ ul .reply__comments.hide {
 
 .video__related__title {
   font-size: var(--font-size-regular);
-  font-weight: bold;
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -666,6 +675,10 @@ ul .reply__comments.hide {
   .comments {
     grid-area: e;
   }
+
+  .relatedVideo {
+    padding-left: 0;
+  }
 }
 
 /* max-width: 이하 */
@@ -686,5 +699,11 @@ ul .reply__comments.hide {
   .header .action__recording,
   .header .action__bell {
     width: 30px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .video .video__info__left {
+    display: none;
   }
 }
