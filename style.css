@@ -12,7 +12,7 @@
   --font-size-micro: 0.9rem;
 
   --line: #cfcfcf;
-  --border-radius: 2px;
+  --border-radius: 3px;
 
   --color-background-superLightGrey: #f8f8f8;
   --color-background-lightGrey: #ececec;
@@ -33,6 +33,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
 button {
@@ -82,36 +83,40 @@ ul .reply__comments.hide {
   padding: 0 38px 0 24px;
 }
 
-.header .logo {
+.logo {
   display: flex;
   margin-left: 0.8rem;
   margin-right: 8.4rem;
 }
 
-.header .fa-bars {
-  font-size: var(--font-size-large);
-  margin-right: 1.8rem;
+.button.bars {
+  margin-right: 1.4rem;
 }
 
-.header .ytLogo {
+.fa-bars {
+  font-size: var(--font-size-large);
+  padding: 14px 18px;
+}
+
+.ytLogo {
   display: flex;
   align-items: center;
 }
 
-.header .logo__youtube {
+.logo__youtube {
   width: 46px;
   height: 46px;
   margin-right: 0.4rem;
 }
 
-.header .logo__title {
+.logo__title {
   font-size: var(--font-size-large);
   font-weight: bold;
   margin-right: 0.2rem;
   font-family: 'Oswald', sans-serif;
 }
 
-.header .logo__kr {
+.logo__kr {
   align-self: flex-start;
   font-size: var(--font-size-micro);
   color: var(--font-color-sub);
@@ -174,6 +179,41 @@ ul .reply__comments.hide {
 .header .function__bell,
 .header .function__owner__wrap {
   background-color: transparent;
+}
+
+.input__search,
+.input__microphone,
+.function__recording,
+.function__bell {
+  position: relative;
+}
+
+.input__search__subtitle,
+.input__microphone__subtitle,
+.function__recording__subtitle,
+.function__bell__subtitle {
+  padding: 10px 18px;
+  font-size: var(--font-size-small);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  opacity: 0.5;
+  display: none;
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  left: -20px;
+}
+
+.input__search__subtitle {
+  top: 60px;
+  left: 8px;
+}
+
+.input__microphone__subtitle {
+  width: 140px;
+  top: 60px;
+  left: -26px;
 }
 
 .header .fa-video,
@@ -641,6 +681,51 @@ ul .reply__comments.hide {
 
 .comments .reply__icon-thumbdown {
   margin-right: 24px;
+}
+
+/* aside */
+.logo__sideBar {
+  width: 360px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0 24px 24px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+}
+
+.hide {
+  display: none;
+}
+
+.logo.sideBar {
+  height: 6rem;
+}
+
+.logo__kr.sideBar {
+  margin-top: 16px;
+}
+
+.sideBar__content {
+  display: flex;
+  margin: 0 0 30px 30px;
+}
+
+.content__icon i {
+  font-size: var(--font-size-medium);
+}
+
+.content__description {
+  margin-left: 46px;
+  font-size: var(--font-size-regular);
+}
+
+.sideBar__line {
+  width: 94%;
+  height: 1px;
+  background-color: var(--color-background-lightGrey);
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 /* min-width: 이상 */

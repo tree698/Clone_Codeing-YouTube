@@ -16,9 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- <div class="web__wrap"></div> -->
       <header class="header">
         <div class="logo">
-          <button class="button sideBar">
+          <button class="button bars">
             <i class="fa-solid fa-bars"></i>
           </button>
           <button class="button ytLogo">
@@ -31,23 +32,26 @@
           <input type="text" class="input__text" placeholder="검색"/>
           <button class="button input__search">
             <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="input__search__subtitle">검색</div>
           </button>
           <button class="button input__microphone">
             <i class="fa-solid fa-microphone"></i>
+            <div class="input__microphone__subtitle">음성으로 검색</div>
           </button>
         </div>
         <div class="function">
           <button class="button function__recording">
             <i class="fa-solid fa-video"></i>
+            <div class="function__recording__subtitle">만들기</div>
           </button>
           <button class="button function__bell">
-            <i class="fa-solid fa-bell"></i>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div class="function__bell__subtitle">알림</div>
           </button>
           <button class="button function__owner__wrap">
             <img src="/img/logo-owner.png" alt="owner logo" class="function__owner">
           </button>
         </div>
-
         <div class="actionBtn">
           <button class="button action__search">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -597,5 +601,85 @@
           </ul>
         </section>
       </main>
+
+      <aside class="logo__sideBar hide">
+        <div class="logo sideBar">
+          <button class="button bars sideBar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button class="button ytLogo">
+            <img src="/img/logo.png" alt="youtube logo" class="logo__youtube">
+            <span class="logo__title">YouTube</span>
+            <span class="logo__kr sideBar">KR</span>
+          </button>
+        </div>
+        <div class="sideBar__contents">
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <span class="content__description">홈</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-regular fa-compass"></i>
+            </div>
+            <span class="content__description">탐색</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <span class="content__description">Shorts</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-brands fa-square-youtube"></i>
+            </div>
+            <span class="content__description">구독</span>
+          </div>
+
+          <div class="sideBar__line"></div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-regular fa-folder-closed"></i>
+            </div>
+            <span class="content__description">보관함</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <span class="content__description">시청 기록</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-regular fa-square-caret-right"></i>
+            </div>
+            <span class="content__description">내 동영상</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <span class="content__description">나중에 볼 동영상</span>
+          </div>
+
+          <div class="sideBar__content">
+            <div class="content__icon">
+              <i class="fa-regular fa-thumbs-up"></i>
+            </div>
+            <span class="content__description">좋아요 표시한 동영상</span>
+          </div>
+        </div>
+      </aside>
   </body>
 </html>
