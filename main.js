@@ -54,3 +54,43 @@ barsSideBar.addEventListener('click', () => {
   header.style.opacity = '1';
   contents.style.opacity = '1';
 });
+
+// Section: Video => subtitle
+const infoRightThumbsup = document.querySelector('.info__right.thumbsup');
+const infoRightThumbsdown = document.querySelector('.info__right.thumbsdown');
+const infoRightshare = document.querySelector('.info__right.share');
+const infoRightofflineSave = document.querySelector(
+  '.info__right.offline-save'
+);
+const infoRightsave = document.querySelector('.info__right.save');
+
+const thumbsupSubtitle = document.querySelector('.thumbsup__subtitle');
+const thumbsdownSubtitle = document.querySelector('.thumbsdown__subtitle');
+const shareSubtitle = document.querySelector('.share__subtitle');
+const offlieSaveSubtitle = document.querySelector('.offline-save__subtitle');
+const saveSubtitle = document.querySelector('.save__subtitle');
+
+displaySubtitle(infoRightThumbsup, thumbsupSubtitle);
+displaySubtitle(infoRightThumbsdown, thumbsdownSubtitle);
+displaySubtitle(infoRightshare, shareSubtitle);
+displaySubtitle(infoRightofflineSave, offlieSaveSubtitle);
+displaySubtitle(infoRightsave, saveSubtitle);
+
+removeSubtitle(infoRightThumbsup, thumbsupSubtitle);
+removeSubtitle(infoRightThumbsdown, thumbsdownSubtitle);
+removeSubtitle(infoRightshare, shareSubtitle);
+removeSubtitle(infoRightofflineSave, offlieSaveSubtitle);
+removeSubtitle(infoRightsave, saveSubtitle);
+
+// Section: Video => ellipsis
+const ellipsisBtn = document.querySelector('.ellipsisBtn');
+const ellipsis = document.querySelector('.ellipsis');
+
+ellipsisBtn.addEventListener('click', () => {
+  ellipsis.classList.toggle('hide');
+  ellipsisBtn.classList.toggle('ellipsisBtn__animation');
+
+  setTimeout(() => {
+    ellipsisBtn.classList.toggle('ellipsisBtn__animation');
+  }, 1001);
+});
