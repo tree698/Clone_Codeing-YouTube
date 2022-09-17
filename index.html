@@ -120,8 +120,24 @@
               </div>
             </div>
             <div class="title__right">
-              <button class="button title__subscribe">구독중</button>
-              <i class="fa-solid fa-bell-slash"></i>
+              <button class="button title__subscribe change">구독</button>
+              <button class="bell__main hide">
+                <i class="fa-regular fa-bell"></i>
+              </button>
+              <div class="bells hide">
+                <button class='bell all' data-name="all">
+                  <i class="fa-solid fa-bell" data-name="all"></i>
+                  <span class="bell__description" data-name="all">전체</span>
+                </button>
+                <button class='bell set' data-name="set">
+                  <i class="fa-regular fa-bell" data-name="set"></i>
+                  <span class="bell__description" data-name="set">맞춤설정</span>
+                </button>
+                <button class='bell none' data-name="none">
+                  <i class="fa-regular fa-bell-slash" data-name="none"></i>
+                  <span class="bell__description last" data-name="none">없음</span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="channel__description">

@@ -100,3 +100,70 @@ ellipsisBtn.addEventListener('click', () => {
     ellipsisBtn.classList.toggle('ellipsisBtn__animation');
   }, 1001);
 });
+
+// Section: Channel => button: more info
+const description = document.querySelector('.description');
+const moreInfoBtn = document.querySelector('.more__info');
+
+moreInfoBtn.addEventListener('click', () => {
+  const result = description.classList.toggle('description');
+  moreInfoBtn.textContent = '';
+  moreInfoBtn.textContent = `${result ? '더보기' : '간략히'}`;
+});
+
+// Section: Channel => subscribe
+const titleSubscribe = document.querySelector('.title__subscribe');
+const bellMain = document.querySelector('.bell__main');
+
+titleSubscribe.addEventListener('click', () => {
+  const result = titleSubscribe.classList.toggle('change');
+  result
+    ? changeColorAndText(titleSubscribe, '#cc0103', 'white', '구독')
+    : changeColorAndText(titleSubscribe, '#ececec', '#606060', '구독중');
+  bellMain.classList.toggle('hide');
+});
+
+function changeColorAndText(element, background, font, text) {
+  element.style.backgroundColor = background;
+  element.style.color = font;
+  element.textContent = text;
+}
+
+// Section: Channel => bell
+const bellMainIcon = document.querySelector('.bell__main i');
+const bells = document.querySelector('.bells');
+
+bellMain.addEventListener('click', (event) => {
+  bells.classList.toggle('hide');
+});
+
+bells.addEventListener('click', (event) => {
+  bellMainIcon.classList.remove('fa-regular');
+  bellMainIcon.classList.remove('fa-bell');
+  bellMainIcon.classList.remove('fa-solid');
+  bellMainIcon.classList.remove('fa-bell-slash');
+
+  const target = event.target.dataset.name;
+  switch (target) {
+    case 'all':
+      changeClassName(bellMainIcon, 'fa-solid');
+      changeClassName(bellMainIcon, 'fa-bell');
+      break;
+    case 'set':
+      changeClassName(bellMainIcon, 'fa-regular');
+      changeClassName(bellMainIcon, 'fa-bell');
+      break;
+    case 'none':
+      changeClassName(bellMainIcon, 'fa-regular');
+      changeClassName(bellMainIcon, 'fa-bell-slash');
+      break;
+    default:
+  }
+
+  bells.classList.toggle('hide');
+});
+
+function changeClassName(element, className) {
+  element.classList.remove();
+  element.classList.add(className);
+}
