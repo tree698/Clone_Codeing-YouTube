@@ -167,3 +167,35 @@ function changeClassName(element, className) {
   element.classList.remove();
   element.classList.add(className);
 }
+
+// Section: RelatedVideo
+const filterVideos = document.querySelector('.filter__videos');
+const filterClassName = [
+  '.filter__all',
+  '.filter__relatedcontents',
+  '.filter__nbcProvide',
+  '.filter__recentUpload',
+  '.filter__alreadySeen',
+];
+
+const filterElementList = makeElementList(filterClassName);
+
+filterVideos.addEventListener('click', (event) => {
+  const target = event.target.dataset.id;
+  if (target == null) {
+    return;
+  }
+  filterElementList.map((e) => {
+    if (e.dataset.id === target) {
+      e.classList.add('checked');
+    } else {
+      e.classList.remove('checked');
+    }
+  });
+});
+
+function makeElementList(list) {
+  const result = [];
+  list.forEach((r) => result.push(document.querySelector(r)));
+  return result;
+}

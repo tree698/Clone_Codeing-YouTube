@@ -380,6 +380,7 @@ ul .reply__comments.hide {
   font-size: var(--font-size-regular);
   border-radius: var(--border-radius);
   padding: 28px;
+  z-index: 1;
 
   -webkit-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
@@ -548,6 +549,14 @@ ul .reply__comments.hide {
   padding: 10px 16px;
   border-radius: 25px;
   margin-right: 0.4rem;
+}
+
+.filter__all:hover,
+.filter__relatedcontents:hover,
+.filter__nbcProvide:hover,
+.filter__recentUpload:hover,
+.filter__alreadySeen:hover {
+  background-color: #bdbdbd;
 }
 
 .relatedVideo .checked {
