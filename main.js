@@ -199,3 +199,27 @@ function makeElementList(list) {
   list.forEach((r) => result.push(document.querySelector(r)));
   return result;
 }
+
+// Section: Comments
+const buttonArrangeShow = document.querySelector('.button__arrange__show');
+const buttonArrangeSubstitle = document.querySelector(
+  '.button__arrange__subtitle'
+);
+const replyWrap = document.querySelector('.reply__wrap');
+const replyComments = document.querySelector('.reply__comments');
+const caretDownIcon = document.querySelector('.fa-solid.fa-caret-down');
+
+buttonArrangeShow.addEventListener('click', () => {
+  buttonArrangeSubstitle.classList.toggle('hide');
+});
+
+replyWrap.addEventListener('click', () => {
+  const result = replyComments.classList.toggle('hide');
+  if (result) {
+    caretDownIcon.classList.remove('fa-caret-up');
+    caretDownIcon.classList.add('fa-caret-down');
+  } else {
+    caretDownIcon.classList.remove('fa-caret-down');
+    caretDownIcon.classList.add('fa-caret-up');
+  }
+});
