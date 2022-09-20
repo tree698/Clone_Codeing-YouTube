@@ -223,3 +223,36 @@ replyWrap.addEventListener('click', () => {
     caretDownIcon.classList.add('fa-caret-up');
   }
 });
+
+// Section: Comments => show detail
+const showDetailBtn = document.querySelector('.show__details');
+const overFourLine = document.querySelector('.content.overFourLine');
+
+showDetailBtn.addEventListener('click', () => {
+  const result = overFourLine.classList.toggle('detail');
+  showDetailBtn.textContent = '';
+  showDetailBtn.textContent = `${result ? '간략히' : '자세히 보기'}`;
+});
+
+// Section: Comments => input
+const textInput = document.querySelector('.text__input');
+const textInputSubBanner = document.querySelector('.text__input__sub-banner');
+const commentsCancel = document.querySelector('.comments__cancel');
+const commentsSubmit = document.querySelector('.comments__submit');
+
+textInput.addEventListener('click', () => {
+  textInputSubBanner.classList.toggle('hide');
+});
+
+textInput.addEventListener('input', () => {
+  commentsSubmit.style.color = 'var(--color-white)';
+  commentsSubmit.style.backgroundColor = 'var(--color-blue)';
+});
+
+commentsCancel.addEventListener('click', () => {
+  textInput.value = '';
+  textInputSubBanner.classList.toggle('hide');
+
+  commentsSubmit.style.color = 'var(--font-color-sub)';
+  commentsSubmit.style.backgroundColor = '#ececec';
+});

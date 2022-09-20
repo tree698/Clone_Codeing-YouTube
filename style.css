@@ -668,7 +668,7 @@ ul .reply__comments.hide {
 
 .comments__input {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 2rem;
 }
 
@@ -709,7 +709,6 @@ ul .reply__comments.hide {
   background-color: var(--color-background-lightGrey);
   padding: 10px 16px;
   border-radius: var(--border-radius);
-  cursor: auto;
 }
 
 .comments .comment {
@@ -738,6 +737,10 @@ ul .reply__comments.hide {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+}
+
+.comment .content.detail {
+  -webkit-line-clamp: 6;
 }
 
 .comments .show__details {
