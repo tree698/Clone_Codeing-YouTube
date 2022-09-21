@@ -26,13 +26,13 @@ removeSubtitle(bellIcon, bellIconSubtitle);
 
 function displaySubtitle(element, targetElement) {
   element.addEventListener('mouseover', () => {
-    targetElement.style.display = 'block';
+    targetElement.style.opacity = '0.6';
   });
 }
 
 function removeSubtitle(element, targetElement) {
   element.addEventListener('mouseleave', () => {
-    targetElement.style.display = 'none';
+    targetElement.style.opacity = '0';
   });
 }
 
@@ -200,6 +200,23 @@ function makeElementList(list) {
   return result;
 }
 
+// Section: RelatedVideos => more vidoes
+const relatedVideosMoreBtn = document.querySelector(
+  '.relatedVideos__more__button'
+);
+const relatedVideosMore = document.querySelector('.relatedVideos__more');
+
+relatedVideosMoreBtn.addEventListener('click', () => {
+  const result = relatedVideosMore.classList.toggle('hide');
+  result
+    ? showText(relatedVideosMoreBtn, '더보기')
+    : showText(relatedVideosMoreBtn, '간략히');
+});
+
+function showText(element, text) {
+  element.textContent = text;
+}
+
 // Section: Comments
 const buttonArrangeShow = document.querySelector('.button__arrange__show');
 const buttonArrangeSubstitle = document.querySelector(
@@ -255,4 +272,30 @@ commentsCancel.addEventListener('click', () => {
 
   commentsSubmit.style.color = 'var(--font-color-sub)';
   commentsSubmit.style.backgroundColor = '#ececec';
+});
+
+// Section: Comments => reply
+const response = document.querySelector('.response');
+const responseInput = document.querySelector('.response__input');
+const responseInputText = document.querySelector('.response__input-text');
+
+const responseSubBanner = document.querySelector('.response__sub-banner');
+const responseCancel = document.querySelector('.response__cancel');
+const responseSubmit = document.querySelector('.response__submit');
+
+response.addEventListener('click', () => {
+  responseInput.classList.toggle('hide');
+});
+
+responseInputText.addEventListener('input', () => {
+  responseSubmit.style.color = 'var(--color-white)';
+  responseSubmit.style.backgroundColor = 'var(--color-blue)';
+});
+
+responseCancel.addEventListener('click', () => {
+  responseInputText.value = '';
+  responseInput.classList.toggle('hide');
+
+  responseSubmit.style.color = 'var(--font-color-sub)';
+  responseSubmit.style.backgroundColor = '#ececec';
 });
