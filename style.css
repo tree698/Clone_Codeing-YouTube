@@ -133,6 +133,7 @@ ul .reply__comments.hide {
 .ytLogo {
   display: flex;
   align-items: center;
+  height: 65px;
 }
 
 .logo__youtube {
@@ -152,6 +153,7 @@ ul .reply__comments.hide {
   align-self: flex-start;
   font-size: var(--font-size-micro);
   color: var(--font-color-sub);
+  margin-top: 8px;
 }
 
 .header .input {
@@ -937,7 +939,7 @@ ul .reply__comments.hide {
 }
 
 .logo__kr.sideBar {
-  margin-top: 16px;
+  /* margin-top: 10px; */
 }
 
 .sideBar__content {
