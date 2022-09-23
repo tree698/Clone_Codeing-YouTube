@@ -217,41 +217,17 @@ function showText(element, text) {
   element.textContent = text;
 }
 
-// Section: Comments
+// Section: Comments => arrange (정렬 기준)
 const buttonArrangeShow = document.querySelector('.button__arrange__show');
 const buttonArrangeSubstitle = document.querySelector(
   '.button__arrange__subtitle'
 );
-const replyWrap = document.querySelector('.reply__wrap');
-const replyComments = document.querySelector('.reply__comments');
-const caretDownIcon = document.querySelector('.fa-solid.fa-caret-down');
 
 buttonArrangeShow.addEventListener('click', () => {
   buttonArrangeSubstitle.classList.toggle('hide');
 });
 
-replyWrap.addEventListener('click', () => {
-  const result = replyComments.classList.toggle('hide');
-  if (result) {
-    caretDownIcon.classList.remove('fa-caret-up');
-    caretDownIcon.classList.add('fa-caret-down');
-  } else {
-    caretDownIcon.classList.remove('fa-caret-down');
-    caretDownIcon.classList.add('fa-caret-up');
-  }
-});
-
-// Section: Comments => show detail
-const showDetailBtn = document.querySelector('.show__details');
-const overFourLine = document.querySelector('.content.overFourLine');
-
-showDetailBtn.addEventListener('click', () => {
-  const result = overFourLine.classList.toggle('detail');
-  showDetailBtn.textContent = '';
-  showDetailBtn.textContent = `${result ? '간략히' : '자세히 보기'}`;
-});
-
-// Section: Comments => input
+// Section: Comments => input (댓글 추가)
 const textInput = document.querySelector('.text__input');
 const textInputSubBanner = document.querySelector('.text__input__sub-banner');
 const commentsCancel = document.querySelector('.comments__cancel');
@@ -274,25 +250,63 @@ commentsCancel.addEventListener('click', () => {
   commentsSubmit.style.backgroundColor = '#ececec';
 });
 
-// Section: Comments => reply
-const response = document.querySelector('.response');
-const responseInput = document.querySelector('.response__input');
-const responseInputText = document.querySelector('.response__input-text');
+// Section: Comments => show detail
+const showDetailBtn = document.querySelector('.show__details');
+const overFourLine = document.querySelector('.content.overFourLine');
 
-const responseSubBanner = document.querySelector('.response__sub-banner');
-const responseCancel = document.querySelector('.response__cancel');
-const responseSubmit = document.querySelector('.response__submit');
-
-response.addEventListener('click', () => {
-  responseInput.classList.toggle('hide');
+showDetailBtn.addEventListener('click', () => {
+  const result = overFourLine.classList.toggle('detail');
+  showDetailBtn.textContent = '';
+  showDetailBtn.textContent = `${result ? '간략히' : '자세히 보기'}`;
 });
 
-responseInputText.addEventListener('input', () => {
-  responseSubmit.style.color = 'var(--color-white)';
-  responseSubmit.style.backgroundColor = 'var(--color-blue)';
+// Section: Comments => 답글
+document.addEventListener('click', (e) => {
+  const targetName = e.target.dataset.name;
+  const targetId = e.target.dataset.id;
+
+  if (targetName !== 'response') {
+    return;
+  }
+
+  const result = document.querySelector(
+    `.response__input[data-id="${targetId}"]`
+  );
+  result.classList.toggle('hide');
 });
 
-responseCancel.addEventListener('click', () => {
+document.addEventListener('input', (e) => {
+  const targetName = e.target.dataset.name;
+  const targetId = e.target.dataset.id;
+
+  if (targetName !== 'input-text') {
+    return;
+  }
+  const result = document.querySelector(
+    `.response__submit[data-id="${targetId}"]`
+  );
+
+  result.style.color = 'var(--color-white)';
+  result.style.backgroundColor = 'var(--color-blue)';
+});
+
+document.addEventListener('click', (e) => {
+  const targetName = e.target.dataset.name;
+  const targetId = e.target.dataset.id;
+
+  if (targetName !== 'cancel') {
+    return;
+  }
+  const responseInputText = document.querySelector(
+    `.response__input-text[data-id="${targetId}"]`
+  );
+  const responseInput = document.querySelector(
+    `.response__input[data-id="${targetId}"]`
+  );
+  const responseSubmit = document.querySelector(
+    `.response__submit[data-id="${targetId}"]`
+  );
+
   responseInputText.value = '';
   responseInput.classList.toggle('hide');
 
