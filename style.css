@@ -471,13 +471,23 @@ ul .reply__comments.hide {
   position: relative;
 }
 
-.channel .title__subscribe {
+.channel .title__subscribe-red {
   width: 120px;
   height: 60px;
   font-size: var(--font-size-regular);
   border-radius: var(--border-radius);
   background-color: #cc0103;
   color: white;
+  margin-right: 16px;
+}
+
+.channel .title__subscribe-grey {
+  width: 120px;
+  height: 60px;
+  font-size: var(--font-size-regular);
+  border-radius: var(--border-radius);
+  background-color: #ececec;
+  color: #606060;
   margin-right: 16px;
 }
 
@@ -496,7 +506,6 @@ ul .reply__comments.hide {
   border-radius: var(--border-radius);
 
   position: absolute;
-  /* top: 4px; */
   left: 120px;
 
   -webkit-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
@@ -919,7 +928,7 @@ ul .reply__comments.hide {
   margin-right: 24px;
 }
 
-/* aside */
+/* aside: logo__sideBar */
 .logo__sideBar {
   width: 360px;
   position: absolute;
@@ -936,10 +945,6 @@ ul .reply__comments.hide {
   height: 6rem;
   display: flex;
   align-items: center;
-}
-
-.logo__kr.sideBar {
-  /* margin-top: 10px; */
 }
 
 .sideBar__content {
@@ -968,10 +973,49 @@ ul .reply__comments.hide {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: black;
   opacity: 0.5;
+}
+
+/* aside: cancelSubscribe */
+.cancelSubscribe {
+  width: 420px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 44px 34px;
+  z-index: 1;
+
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  -webkit-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 43px -14px rgba(0, 0, 0, 1);
+}
+
+.cancelSubscribe__ask,
+.cancelSubscribe .banner__cancel,
+.cancelSubscribe .subscribe__cencel {
+  font-size: var(--font-size-regular);
+  color: var(--font-color-sub);
+  margin: 0;
+  text-align: center;
+}
+
+.cancel__divider {
+  margin: 30px 0;
+}
+
+.cancel-subscribe__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancelSubscribe .subscribe__cencel {
+  color: var(--color-blue);
 }
 
 /* min-width: 이상 */

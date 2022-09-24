@@ -36,31 +36,6 @@ function removeSubtitle(element, targetElement) {
   });
 }
 
-// header: sidebar
-const headBars = document.querySelector('button.bars.head');
-const sideBars = document.querySelector('button.bars.sideBar');
-const logoSideBar = document.querySelector('.logo__sideBar');
-const backgroundBlack = document.querySelector('.background-black');
-
-headBars.addEventListener('click', () => {
-  logoSideBar.style.left = '0px';
-
-  headBars.classList.toggle('buttonBars__animation');
-  setTimeout(() => {
-    headBars.classList.toggle('buttonBars__animation');
-  }, 1001);
-  backgroundBlack.classList.toggle('hide');
-});
-
-sideBars.addEventListener('click', () => {
-  logoSideBar.style.left = '-360px';
-  sideBars.classList.toggle('buttonBars__animation');
-  setTimeout(() => {
-    sideBars.classList.toggle('buttonBars__animation');
-  }, 1001);
-  backgroundBlack.classList.toggle('hide');
-});
-
 // Section: Video => subtitle
 const infoMiddleThumbsup = document.querySelector('.info__middle.thumbsup');
 const infoMiddleThumbsdown = document.querySelector('.info__middle.thumbsdown');
@@ -112,22 +87,15 @@ moreInfoBtn.addEventListener('click', () => {
 });
 
 // Section: Channel => subscribe
-const titleSubscribe = document.querySelector('.title__subscribe');
+const titleSubscribeRed = document.querySelector('.title__subscribe-red');
+const titleSubscribeGrey = document.querySelector('.title__subscribe-grey');
 const bellMain = document.querySelector('.bell__main');
 
-titleSubscribe.addEventListener('click', () => {
-  const result = titleSubscribe.classList.toggle('change');
-  result
-    ? changeColorAndText(titleSubscribe, '#cc0103', 'white', '구독')
-    : changeColorAndText(titleSubscribe, '#ececec', '#606060', '구독중');
+titleSubscribeRed.addEventListener('click', () => {
+  titleSubscribeRed.classList.add('hide');
+  titleSubscribeGrey.classList.remove('hide');
   bellMain.classList.toggle('hide');
 });
-
-function changeColorAndText(element, background, font, text) {
-  element.style.backgroundColor = background;
-  element.style.color = font;
-  element.textContent = text;
-}
 
 // Section: Channel => bell
 const bellMainIcon = document.querySelector('.bell__main i');
@@ -328,4 +296,53 @@ replyWrap.addEventListener('click', () => {
     caretDownIcon.classList.remove('fa-caret-down');
     caretDownIcon.classList.add('fa-caret-up');
   }
+});
+
+// aside: logo__sidebar
+const headBars = document.querySelector('button.bars.head');
+const sideBars = document.querySelector('button.bars.sideBar');
+const logoSideBar = document.querySelector('.logo__sideBar');
+const backgroundBlack = document.querySelector('.background-black');
+
+headBars.addEventListener('click', () => {
+  logoSideBar.style.left = '0px';
+
+  headBars.classList.toggle('buttonBars__animation');
+  setTimeout(() => {
+    headBars.classList.toggle('buttonBars__animation');
+  }, 1001);
+  backgroundBlack.classList.toggle('hide');
+});
+
+sideBars.addEventListener('click', () => {
+  logoSideBar.style.left = '-360px';
+  sideBars.classList.toggle('buttonBars__animation');
+  setTimeout(() => {
+    sideBars.classList.toggle('buttonBars__animation');
+  }, 1001);
+  backgroundBlack.classList.toggle('hide');
+});
+('');
+
+// aside: cancel subscribe
+const cancelSubscribeBtn = document.querySelector('.cancelSubscribe');
+const bannerCancelBtn = document.querySelector('.banner__cancel');
+const subscribeCancelBtn = document.querySelector('.subscribe__cencel');
+
+titleSubscribeGrey.addEventListener('click', () => {
+  cancelSubscribeBtn.classList.toggle('hide');
+  backgroundBlack.classList.toggle('hide');
+});
+
+bannerCancelBtn.addEventListener('click', () => {
+  cancelSubscribeBtn.classList.toggle('hide');
+  backgroundBlack.classList.toggle('hide');
+});
+
+subscribeCancelBtn.addEventListener('click', () => {
+  cancelSubscribeBtn.classList.toggle('hide');
+  titleSubscribeRed.classList.remove('hide');
+  titleSubscribeGrey.classList.add('hide');
+  backgroundBlack.classList.toggle('hide');
+  bellMain.classList.add('hide');
 });
