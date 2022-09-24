@@ -313,3 +313,19 @@ document.addEventListener('click', (e) => {
   responseSubmit.style.color = 'var(--font-color-sub)';
   responseSubmit.style.backgroundColor = '#ececec';
 });
+
+// Section: Comments => reply (답답글)
+const replyWrap = document.querySelector('.reply__wrap');
+const replyComments = document.querySelector('.reply__comments');
+const caretDownIcon = document.querySelector('.fa-solid.fa-caret-down');
+
+replyWrap.addEventListener('click', () => {
+  const result = replyComments.classList.toggle('hide');
+  if (result) {
+    caretDownIcon.classList.remove('fa-caret-up');
+    caretDownIcon.classList.add('fa-caret-down');
+  } else {
+    caretDownIcon.classList.remove('fa-caret-down');
+    caretDownIcon.classList.add('fa-caret-up');
+  }
+});
