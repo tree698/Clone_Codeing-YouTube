@@ -9,7 +9,7 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23F7DF1C)
 
 ## :medal_sports: 배포
-- [https://tree698.github.io/Clone_Codeing-YouTube/](https://tree698.github.io/Clone_Codeing-YouTube/)
+- [https://tree698.github.io/YouTube-Clone_Codeing/](https://tree698.github.io/YouTube-Clone_Codeing/)
 
 ## :medal_sports: 데모
 |**스크린 샷**|
