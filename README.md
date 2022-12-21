@@ -4,9 +4,9 @@
 - YouTube 클론 코딩 (프론트 엔드)
 
 ## :medal_sports: 스택
-![HTML](https://img.shields.io/badge/-HTML5-F05032?style=for-the-badge&logo=html5&logoColor=ffffff)
-![CSS](https://img.shields.io/badge/-CSS-007ACC?style=for-the-badge&logo=css3)
-![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23F7DF1C)
+![HTML](https://img.shields.io/badge/-HTML-F05032?style=flat&logo=HTML)
+![CSS](https://img.shields.io/badge/-CSS-007ACC?style=flat&logo=css3)
+![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flate&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23F7DF1C)
 
 ## :medal_sports: 배포
 - [https://tree698.github.io/YouTube-Clone_Codeing/](https://tree698.github.io/YouTube-Clone_Codeing/)
